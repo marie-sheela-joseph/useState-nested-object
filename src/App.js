@@ -60,9 +60,18 @@ function App() {
           />
         </div>
         <div>
+          <label>Link</label>
+          <input
+            type="text"
+            name="link"
+            value={newData.artwork.link}
+            onChange={(e) => handleChange(e)}
+          />
+        </div>
+        <div>
           <p>
             <a
-              href="https://de.wikipedia.org/wiki/Datei:Blue_Nana_-_panoramio.jpg"
+              href={newData.artwork.link}
               target="_blank">{newData.artwork.title}
             </a> by {newData.name} (Located in {newData.artwork.city})
           </p>
